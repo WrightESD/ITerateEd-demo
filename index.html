@@ -1,23 +1,147 @@
----
-layout: default
----
+CTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Iterateed-demo by WrightESD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Iterateed-demo</h1>
+      <h2 class="project-tagline">Google API demo implemented in Python</h2>
+      <a href="https://github.com/WrightESD/ITerateEd-demo" class="btn">View on GitHub</a>
+      <a href="https://github.com/WrightESD/ITerateEd-demo/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/WrightESD/ITerateEd-demo/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-<div class="home">
+    <section class="main-content">
+      <h2>
+<a id="summary" class="anchor" href="#summary" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Summary</h2>
 
-  <h1 class="page-heading">Posts</h1>
+<p>This demo will take two Google Sheets and create a pivot table in a third Google Sheet. Although this can be accomplished using Google Sheets alone, I believe this will be a more scalable and portable solution.</p>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<h2>
+<a id="outline" class="anchor" href="#outline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Outline</h2>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<ul>
+<li>Overview
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<ul>
+<li>General Flow</li>
+<li>Flow With Code Snippets</li>
+</ul>
+</li>
+<li>Initial Setup
 
-</div>
+<ul>
+<li>Service Account
+
+<ul>
+<li>Create new project in Developer's Console</li>
+<li>Create Service Account</li>
+<li>Download key as json</li>
+<li>Rename key</li>
+</ul>
+</li>
+<li>MySQL
+
+<ul>
+<li>Run install script</li>
+<li>Add non-root credentials</li>
+<li>Create database</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Google Sheets
+
+<ul>
+<li>Share all Sheets with Service Account</li>
+</ul>
+</li>
+<li>Python Code
+
+<ul>
+<li>Using Git
+
+<ul>
+<li>Clone</li>
+</ul>
+</li>
+<li>Copying and Pasting
+
+<ul>
+<li>Create each file manually</li>
+<li>Copy and paste</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Configuring the Scripts</li>
+<li>Setting Up Cron</li>
+</ul>
+
+<p><details>
+  <summary>Your header here! (Click to expand)</summary>
+  Your content here...</details></p>
+
+<blockquote>
+<p>markup like blockquote's should even work on github!
+  more content here...
+</p>
+</blockquote>
+
+<h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h2>
+
+<h3>
+<a id="general-flow" class="anchor" href="#general-flow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>General Flow</h3>
+
+<p><img src="https://wrightesd.github.io/ITerateEd-demo/images/IteratEd-demo-flow.png" alt="General Flow Chart"></p>
+
+<h4>
+<a id="service-account" class="anchor" href="#service-account" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Service Account</h4>
+
+<p>Before you can run the Python scripts you'll need to set up a Service Account in GAFE. This is a robot account that your script will use to access Sheets. Any Sheet that you want your script to access will be shared with this Service Account.</p>
+
+<h4>
+<a id="mysql" class="anchor" href="#mysql" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MySQL</h4>
+
+<p>You must also set up a MySQL database on the same server that the Python script will be running. I've included a script to that should take care of most of this part.</p>
+
+<h3>
+<a id="the-script" class="anchor" href="#the-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Script</h3>
+
+<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Ryan Aguilar <a href="https://github.com/WrightESD" class="user-mention">@WrightESD</a></p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with IterateEd-demo? Email <a href="mailto:raguilar@wrightesd.org">raguilar@wrightesd.org</a>.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/WrightESD/ITerateEd-demo">Iterateed-demo</a> is maintained by <a href="https://github.com/WrightESD">WrightESD</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
